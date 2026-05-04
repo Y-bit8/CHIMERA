@@ -1,0 +1,23 @@
+{
+  "num_folds": 10,
+  "corr_mean": 0.8487763608536671,
+  "corr_std": 0.03839967316760229,
+  "fold_mean": 5.5,
+  "fold_std": 3.0276503540974917,
+  "loss_mean": 1.4317710638046264,
+  "loss_std": 0.1807174000298257,
+  "mae_mean": 1.0770336389543531,
+  "mae_std": 0.13191479997822655,
+  "num_cdan_target_mean": 88.6,
+  "num_cdan_target_std": 0.5163977794943222,
+  "num_source_train_mean": 797.4,
+  "num_source_train_std": 0.5163977794943223,
+  "num_test_mean": 88.6,
+  "num_test_std": 0.5163977794943222,
+  "num_val_mean": 0.0,
+  "num_val_std": 0.0,
+  "r2_mean": 0.7106007598615328,
+  "r2_std": 0.06324017607982517,
+  "rmse_mean": 1.4317710558628278,
+  "rmse_std": 0.18071740257633384
+}

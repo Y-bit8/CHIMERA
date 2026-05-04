@@ -1,0 +1,22 @@
+{
+  "protocol": "original_github_transductive_cdan",
+  "test_usage": "when CDAN is enabled with target_source='test', test-fold inputs are used as unlabeled target-domain samples during adversarial alignment; labels are not used for CDAN",
+  "validation_usage": "when training.selection_source='test', validation is not used for epoch selection; this zip intentionally follows the original GitHub test-driven selection logic",
+  "domain_adaptation": {
+    "enabled": true,
+    "target_source": "test",
+    "target_ratio": 0.2,
+    "lambda": 1.0,
+    "grl_alpha": 1.0,
+    "lr": 0.001,
+    "hidden_dim": 256
+  },
+  "ablation": {
+    "no_fingerprint": false,
+    "no_graph": false,
+    "no_motif": false,
+    "no_interaction": false,
+    "no_loffi": false,
+    "no_condition": false
+  }
+}

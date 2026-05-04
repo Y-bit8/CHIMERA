@@ -1,0 +1,17 @@
+{
+  "dataset": "Data A",
+  "num_rows": 3646,
+  "data_file": "data/dataA/data3647.xlsx",
+  "target": "ee >= threshold",
+  "fingerprint_smiles_cols": [
+    "product",
+    "ligand"
+  ],
+  "fingerprint_dim": 2048,
+  "smiles_aliases": {
+    "ligand": "Ni_ligan_Smiles",
+    "product": "product",
+    "R1": "R1",
+    "R2": "R2"
+  }
+}

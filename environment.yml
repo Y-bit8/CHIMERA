@@ -1,0 +1,35 @@
+name: chimera
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+  - pip
+  - rdkit
+  - numpy
+  - pandas
+  - scikit-learn
+  - tqdm
+  - pyyaml
+  - matplotlib
+  - seaborn
+  - openpyxl
+
+  - pip:
+      
+      - --extra-index-url https://download.pytorch.org/whl/cu118
+      - torch==2.1.2
+      - torchvision
+      - torchaudio
+
+      
+      - pyg-lib
+      - torch-scatter
+      - torch-sparse
+      - torch-cluster
+      - torch-spline-conv
+      - -f https://data.pyg.org/whl/torch-2.1.2+cu118.html
+
+      
+      - torch-geometric

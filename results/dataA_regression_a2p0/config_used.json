@@ -1,0 +1,65 @@
+{
+  "name": "dataA_regression_a2p0",
+  "task_type": "regression",
+  "task_module": "chimera.tasks.dataA_regression",
+  "seed": 42,
+  "device": "auto",
+  "output_dir": "results/dataA_regression_a2p0",
+  "data": {
+    "data_dir": "data/dataA",
+    "reaction_file": "data3647.xlsx",
+    "ligand_column": "Ni_ligan_Smiles",
+    "product_column": "product",
+    "r1_column": "R1",
+    "r2_column": "R2",
+    "target_column": "ddG",
+    "drop_zero_ddg": false,
+    "fingerprint_smiles_cols": [
+      "product",
+      "ligand"
+    ],
+    "fingerprint_bits": 1024,
+    "temperature_column": "Temp",
+    "time_column": "Time[h]",
+    "metal_column": "金属"
+  },
+  "model": {
+    "num_layers": 2,
+    "hidden": 32,
+    "chirality_alpha": 2.0
+  },
+  "split": {
+    "mode": "kfold",
+    "num_folds": 10,
+    "val_ratio": 0.0
+  },
+  "training": {
+    "epochs": 200,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "patience": 10,
+    "lr_factor": 0.1,
+    "min_lr": 1e-07,
+    "monitor": "r2",
+    "monitor_maximize": true,
+    "selection_source": "test"
+  },
+  "domain_adaptation": {
+    "enabled": true,
+    "target_source": "test",
+    "target_ratio": 0.2,
+    "lambda": 1.0,
+    "grl_alpha": 1.0,
+    "lr": 0.001,
+    "hidden_dim": 256
+  },
+  "ablation": {
+    "no_fingerprint": false,
+    "no_graph": false,
+    "no_motif": false,
+    "no_interaction": false,
+    "no_loffi": false,
+    "no_condition": false
+  }
+}
